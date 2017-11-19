@@ -1,0 +1,22 @@
+{
+  "name": "ywc-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/futurouz/ywc_interview.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/futurouz/ywc_interview/issues"
+  },
+  "homepage": "https://github.com/futurouz/ywc_interview#readme",
+  "dependencies": {
+    "workbox-sw": "^2.1.2"
+  }
+}
