@@ -19,12 +19,26 @@ async function updateYWC() {
     const res = await fetch(`https://ywc15.ywc.in.th/api/interview`);
     const json = await res.json();
     data = json;
-    main.innerHTML = json.map(createList).join("");
+    for (var i = 0; i < json.length; i++) {
+        if (json[i].major === 'programming') {
+            document.getElementById("programming").innerHTML += `${json[i].firstName}<br>`;
+        }
+        if (json[i].major === 'design') {
+            document.getElementById("Design").innerHTML += `${json[i].firstName}<br>`;
+        }
+        if (json[i].major === 'content') {
+            document.getElementById("Content").innerHTML += `${json[i].firstName}<br>`;
+        }
+        if (json[i].major === 'marketing') {
+            document.getElementById("Marketing").innerHTML += `${json[i].firstName}<br>`;
+        }
+
+    }
 }
 
-function createList(list) {
-    return `<p>${list.firstName} ${list.lastName}</p>`
-}
+// function createList(list) {
+//     return `< p > ${ list.firstName } ${ list.lastName }</p > `
+// }
 
 
 function search() {
@@ -38,5 +52,5 @@ function search() {
     if (correct.length == 0) {
         alert('Not found!');
     }
-    alert(`Found user ${correct[0].firstName}`);
+    alert(`Found user ${correct[0].firstName} `);
 }
