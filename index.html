@@ -9,22 +9,30 @@
     <link rel="stylesheet" href="css/sweetalert2.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="js/sweetalert2.all.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
     <div class="container-fluid">
+        <div class="search_page">
+            <div class="close">
+                <span>x</span>
+            </div>
+
+            <div class="col-md-4 col-md-offset-4">
+                <input type="text" id="name" class="form-control" placeholder="ค้นหาชื่อทันที" onkeyup="verify()">
+                <br>
+                <button type="button" id="submit" class="btn" onclick="search()" disabled>ค้นหา</button>
+            </div>
+        </div>
         <div class="row">
             <div class="bg">
                 <div class="col-md-12 text-center">
-                    <img src="images/ywc.png" alt="YWC#15" class="img-responsive">
-                    <h1>SEMI_FINAL ROUND</h1>
+                    <img src="images/ywc.png" alt="YWC#15" class="img-responsive" width="500px">
+                    <span class="semi">SEMI_FINAL ROUND</span>
                     <p>ประกาศผู้มีสิทธิ์เข้าสัมภาษณ์</p>
+                    <span class="search">ค้นหารายชื่อทันที</span>
                 </div>
-                <!-- <div class="col-md-12">
-                    <input type="text" id="name" class="form-control" placeholder="ค้นหาชื่อทันที">
-                    <br>
-                    <button type="submit" id="submit" class="btn" onclick="search()">ค้นหา</button>
-                </div> -->
             </div>
         </div>
 
@@ -56,7 +64,23 @@
             </div>
         </div>
 
+        <script>
+            $(document).ready(function () {
+                $(".search").click(function () {
+                    $(".search_page").fadeIn()
+                });
+                $(".close").click(function () {
+                    $(".search_page").fadeOut()
+                });
+                $(document).bind('keydown', function (e) {
+                    if (e.which == 27) {
+                        $(".search_page").fadeOut()
+                    }
+                });
+            });
+        </script>
 
+        </script>
         <script src="app.js"></script>
 </body>
 

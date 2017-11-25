@@ -36,6 +36,15 @@ async function updateYWC() {
     }
 }
 
+function verify() {
+    var text = document.getElementById('name').value;
+    if (text.length > 0) {
+        document.getElementById('submit').disabled = false;
+    } else {
+        document.getElementById('submit').disabled = true;
+    }
+}
+
 function search() {
     var correct = [];
     var input = document.getElementById("name").value;
@@ -58,4 +67,5 @@ function search() {
         type: 'success',
         confirmButtonText: 'Close'
     })
-}
+};
+
