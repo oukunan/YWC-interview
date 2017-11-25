@@ -1,5 +1,6 @@
 * {
     font-family: 'Athiti', sans-serif;
+
 }
 .bg {
     background-image: url("images/bg.jpeg");
@@ -7,17 +8,30 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-    
+    background-attachment: fixed;  
+    display: flex;
+    align-items: center;
 }
-
-.test {
+.bg h1,p {
     color: white;
 }
+.img-responsive {
+    margin: 0 auto;
+}
+
+
 li {
-    border: 0.5px solid black;
+    border: 0.5px solid #03313e;
     padding: 5px;
     font-size: 16px;
     font-weight: bold;
-    
+    background-color: #eeeeee;
 }
+.bottom h2 {
+    background-color: #03313e;
+    color: white;
+    margin-bottom: 0px;
+    padding: 15px;
+}	
+
+	/* #bf5d27 */
