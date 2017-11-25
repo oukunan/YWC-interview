@@ -21,25 +21,20 @@ async function updateYWC() {
     data = json;
     for (var i = 0; i < json.length; i++) {
         if (json[i].major === 'programming') {
-            document.getElementById("programming").innerHTML += `${json[i].firstName}<br>`;
+            document.getElementById("programming").innerHTML += `<li>${json[i].firstName} ${json[i].lastName}</li>`;
         }
         if (json[i].major === 'design') {
-            document.getElementById("Design").innerHTML += `${json[i].firstName}<br>`;
+            document.getElementById("Design").innerHTML += `<li>${json[i].firstName} ${json[i].lastName}</li>`;
         }
         if (json[i].major === 'content') {
-            document.getElementById("Content").innerHTML += `${json[i].firstName}<br>`;
+            document.getElementById("Content").innerHTML += `<li>${json[i].firstName} ${json[i].lastName}</li>`;
         }
         if (json[i].major === 'marketing') {
-            document.getElementById("Marketing").innerHTML += `${json[i].firstName}<br>`;
+            document.getElementById("Marketing").innerHTML += `<li>${json[i].firstName} ${json[i].lastName}</li>`;
         }
 
     }
 }
-
-// function createList(list) {
-//     return `< p > ${ list.firstName } ${ list.lastName }</p > `
-// }
-
 
 function search() {
     var correct = [];
