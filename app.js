@@ -2,17 +2,16 @@ const main = document.querySelector('main');
 
 window.addEventListener('load', e => {
     var data;
-
     updateYWC();
 
-    // if ('serviceWorker' in navigator) {
-    //     try {
-    //         navigator.serviceWorker.register('sw.js');
-    //         console.log('SW registered');
-    //     } catch (error) {
-    //         console.log('SW regis fail');
-    //     }
-    // }
+    if ('serviceWorker' in navigator) {
+        try {
+            navigator.serviceWorker.register('sw.js');
+            console.log('SW registered');
+        } catch (error) {
+            console.log('SW regis fail');
+        }
+    }
 });
 
 async function updateYWC() {
@@ -63,9 +62,30 @@ function search() {
     }
     swal({
         title: 'แสดงความยินดีด้วย',
-        text: `คุณ ${correct[0].firstName} `,
+        text: `คุณ ${correct[0].firstName} ${correct[0].lastName}`,
         type: 'success',
         confirmButtonText: 'Close'
     })
+    document.getElementById("name").value = "";
 };
+
+$(window).on('load', function () {
+    $('#status').fadeOut('slow');
+    $('#preloader').delay(2000).fadeOut('slow');
+    $('body').delay(2000).css({ 'overflow': 'visible' });
+});
+
+$(document).ready(function () {
+    $('.search').click(function () {
+        $('.search_page').fadeIn()
+    });
+    $('.exit_search').click(function () {
+        $('.search_page').fadeOut()
+    });
+    $(document).bind('keydown', function (e) {
+        if (e.which == 27) {
+            $('.search_page').fadeOut()
+        }
+    });
+});
 

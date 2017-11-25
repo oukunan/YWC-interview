@@ -1,12 +1,14 @@
 <html>
+
 <head>
     <meta charset="UTF-8">
+    <meta name="theme-color" content="#ffffff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="manifest" href="./../manifest.json">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Athiti" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/sweetalert2.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
     <script src="js/sweetalert2.all.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
@@ -20,10 +22,10 @@
     <div class="container-fluid">
         <div class="search_page">
             <div class="exit_search">
-                <h2 style="color: white">X</h2>
+                <h3 style="color: white">X</h3>
             </div>
             <div class="col-md-4 col-md-offset-4">
-                <h3 class="title_search">กรุณาใส่ชื่อที่่ต้องการจะค้นหา</h3>
+                <h3 class="title_search">ใส่ชื่อที่่ต้องการจะค้นหา</h3>
                 <div class="input-group">
                     <input type="text" id="name" class="form-control" placeholder="ค้นหาชื่อทันที" onkeyup="verify()">
                     <span class="input-group-btn">
@@ -40,61 +42,40 @@
                     <span class="semi">SEMI_FINAL ROUND</span>
                     <p>ประกาศผู้มีสิทธิ์เข้าสัมภาษณ์</p>
                     <span class="search">ค้นหารายชื่อทันที</span>
+                    <img src="images/scroll.png" alt="scrollDown" class="img-responsive scroll animated infinite pulse" width="70px">
                 </div>
             </div>
         </div>
 
-
-        <div class="row bottom">
-            <div class="col-md-3 text-center">
-                <h2>web content</h2>
-                <ul class="list-unstyled">
-                    <div id="Content"></div>
-                </ul>
-            </div>
-            <div class="col-md-3 text-center">
-                <ul class="list-unstyled">
-                    <h2>web design</h2>
-                    <div id="Design"></div>
-                </ul>
-            </div>
-            <div class="col-md-3 text-center">
-                <ul class="list-unstyled">
-                    <h2>web marketing</h2>
-                    <div id="Marketing"></div>
-                </ul>
-            </div>
-            <div class="col-md-3 text-center">
-                <ul class="list-unstyled">
-                    <h2>web programming </h2>
-                    <div id="programming"></div>
-                </ul>
+        <div class="people">
+            <div class="row bottom">
+                <div class="col-md-3 text-center">
+                    <h2>web content</h2>
+                    <ul class="list-unstyled">
+                        <div id="Content"></div>
+                    </ul>
+                </div>
+                <div class="col-md-3 text-center">
+                    <ul class="list-unstyled">
+                        <h2>web design</h2>
+                        <div id="Design"></div>
+                    </ul>
+                </div>
+                <div class="col-md-3 text-center">
+                    <ul class="list-unstyled">
+                        <h2>web marketing</h2>
+                        <div id="Marketing"></div>
+                    </ul>
+                </div>
+                <div class="col-md-3 text-center">
+                    <ul class="list-unstyled">
+                        <h2>web programming </h2>
+                        <div id="programming"></div>
+                    </ul>
+                </div>
             </div>
         </div>
 
-        <script>
-            $(window).on('load', function () { 
-                $('#status').fadeOut('slow'); 
-                $('#preloader').delay(2000).fadeOut('slow');
-                $('body').delay(2000).css({ 'overflow': 'visible' });
-            })
-
-            $(document).ready(function () {
-                $(".search").click(function () {
-                    $(".search_page").fadeIn()
-                });
-                $(".exit_search").click(function () {
-                    $(".search_page").fadeOut()
-                });
-                $(document).bind('keydown', function (e) {
-                    if (e.which == 27) {
-                        $(".search_page").fadeOut()
-                    }
-                });
-            });
-        </script>
-
-        </script>
         <script src="app.js"></script>
 </body>
 
