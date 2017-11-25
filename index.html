@@ -1,5 +1,4 @@
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,16 +12,25 @@
 </head>
 
 <body>
+
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+
     <div class="container-fluid">
         <div class="search_page">
-            <div class="close">
-                <span>x</span>
+            <div class="exit_search">
+                <h2 style="color: white">X</h2>
             </div>
-
             <div class="col-md-4 col-md-offset-4">
-                <input type="text" id="name" class="form-control" placeholder="ค้นหาชื่อทันที" onkeyup="verify()">
+                <h3 class="title_search">กรุณาใส่ชื่อที่่ต้องการจะค้นหา</h3>
+                <div class="input-group">
+                    <input type="text" id="name" class="form-control" placeholder="ค้นหาชื่อทันที" onkeyup="verify()">
+                    <span class="input-group-btn">
+                        <button type="button" id="submit" class="btn" onclick="search()" disabled>ค้นหา</button>
+                    </span>
+                </div>
                 <br>
-                <button type="button" id="submit" class="btn" onclick="search()" disabled>ค้นหา</button>
             </div>
         </div>
         <div class="row">
@@ -65,11 +73,17 @@
         </div>
 
         <script>
+            $(window).on('load', function () { 
+                $('#status').fadeOut('slow'); 
+                $('#preloader').delay(2000).fadeOut('slow');
+                $('body').delay(2000).css({ 'overflow': 'visible' });
+            })
+
             $(document).ready(function () {
                 $(".search").click(function () {
                     $(".search_page").fadeIn()
                 });
-                $(".close").click(function () {
+                $(".exit_search").click(function () {
                     $(".search_page").fadeOut()
                 });
                 $(document).bind('keydown', function (e) {
