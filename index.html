@@ -3,25 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <link rel="manifest" href="./../manifest.json">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 <body>
-    <h1>YWC#15</h1>
-    <input type="text" id="name">
-    <button type="submit" id="submit" onclick="search()">Submit</button>
+    <div class="container">
+        <h1>YWC#15</h1>
+        <!-- <input type="text" id="name">
+        <button type="submit" id="submit" onclick="search()">Submit</button> -->
 
-    <div>
-        <h3>Programming</h3>
-        <div id="programming"></div>
-        <h3>Design</h3>
-        <div id="Design"></div>
-        <h3>Content</h3>
-        <div id="Content"></div>
-        <h3>Marketing</h3>
-        <div id="Marketing"></div>
-
-    </div>
-    <script src="app.js"></script>
+        <div class="row">
+            <div class="col-md-3 text-center">
+                <h3>Content</h3>
+                <div id="Content"></div>
+            </div>
+            <div class="col-md-3 text-center">
+                <h3>Design</h3>
+                <div id="Design"></div>
+            </div>
+            <div class="col-md-3 text-center">
+                <h3>Marketing</h3>
+                <div id="Marketing"></div>
+            </div>
+            <div class="col-md-3 text-center">
+                <h3>Programming tt</h3>
+                <div id="programming"></div>
+            </div>
+        </div>
+        <script src="app.js"></script>
 </body>
 
 </html>

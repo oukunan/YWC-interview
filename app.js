@@ -5,14 +5,14 @@ window.addEventListener('load', e => {
 
     updateYWC();
 
-    if ('serviceWorker' in navigator) {
-        try {
-            navigator.serviceWorker.register('sw.js');
-            console.log('SW registered');
-        } catch (error) {
-            console.log('SW regis fail');
-        }
-    }
+    // if ('serviceWorker' in navigator) {
+    //     try {
+    //         navigator.serviceWorker.register('sw.js');
+    //         console.log('SW registered');
+    //     } catch (error) {
+    //         console.log('SW regis fail');
+    //     }
+    // }
 });
 
 async function updateYWC() {
