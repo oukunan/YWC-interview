@@ -1,10 +1,19 @@
 * {
     font-family: 'Athiti', sans-serif;
 }
-.test {
-    color: blue;
+.bg {
+    background-image: url("images/bg.jpeg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
 }
 
+.test {
+    color: white;
+}
 li {
     border: 0.5px solid black;
     padding: 5px;

@@ -6,14 +6,24 @@
     <link rel="manifest" href="./../manifest.json">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Athiti" rel="stylesheet">
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="js/sweetalert2.all.min.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        <h1 class="test">YWC#15</h1>
-        <!-- <input type="text" id="name">
-        <button type="submit" id="submit" onclick="search()">Submit</button> -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="bg text-center">
+                <img src="images/ywc.png" alt="YWC#15" class="img-responsive" width="400px;">
+                <div class="col-md-4 col-offset-4">
+                    <input type="text" id="name" class="form-control">
+                    <br>
+                    <button type="submit" id="submit" class="btn" onclick="search()">Submit</button>
+                </div>
+            </div>
+        </div>
+
 
         <div class="row">
             <div class="col-md-3 text-center">
@@ -41,6 +51,8 @@
                 </ul>
             </div>
         </div>
+
+      
         <script src="app.js"></script>
 </body>
 

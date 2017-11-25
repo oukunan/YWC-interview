@@ -45,7 +45,17 @@ function search() {
         }
     }
     if (correct.length == 0) {
-        alert('Not found!');
+        swal({
+            title: 'ขอแสดงความเสียใจ',
+            text: 'ไม่มีชื่อของคุณ ลองใหม่ปีหน้านะ',
+            type: 'error',
+            confirmButtonText: 'Close'
+        })
     }
-    alert(`Found user ${correct[0].firstName} `);
+    swal({
+        title: 'แสดงความยินดีด้วย',
+        text: `คุณ ${correct[0].firstName} `,
+        type: 'success',
+        confirmButtonText: 'Close'
+    })
 }
