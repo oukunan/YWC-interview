@@ -54,7 +54,7 @@ function search() {
         }
     }
     if (correct.length == 0) {
-        swal({
+        return swal({
             title: 'ขอแสดงความเสียใจ',
             text: 'ไม่มีชื่อของคุณ ลองใหม่ปีหน้านะ',
             type: 'error',
