@@ -14,6 +14,7 @@ window.addEventListener('load', e => {
     }
 });
 
+
 async function updateYWC() {
     const res = await fetch(`https://ywc15.ywc.in.th/api/interview`);
     const json = await res.json();
@@ -69,6 +70,20 @@ function search() {
     document.getElementById("name").value = "";
 };
 
+function showNoti() {
+    Push.create('SEMI_FINAL ROUND', {
+        body: 'ประกาศผู้มีสิทธิ์เข้าสัมภาษณ์',
+        icon: '/images/icons/icon-96x96.png',
+        link: '/#',
+        timeout: 4000,
+        onClick: function () {
+            window.focus();
+            this.close();
+        }
+    });
+}
+
+
 $(window).on('load', function () {
     $('#status').fadeOut('slow');
     $('#preloader').delay(2000).fadeOut('slow');
@@ -76,6 +91,7 @@ $(window).on('load', function () {
 });
 
 $(document).ready(function () {
+    showNoti()
     $('.search').click(function () {
         $('.search_page').fadeIn()
     });
@@ -88,4 +104,7 @@ $(document).ready(function () {
         }
     });
 });
+
+
+
 

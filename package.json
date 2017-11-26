@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/futurouz/ywc_interview#readme",
   "dependencies": {
+    "express": "^4.16.2",
+    "push.js": "^1.0.5",
     "workbox-sw": "^2.1.2"
   }
 }
