@@ -75,7 +75,7 @@ function showNoti() {
         body: 'ประกาศผู้มีสิทธิ์เข้าสัมภาษณ์',
         icon: '/images/icons/icon-96x96.png',
         link: '/#',
-        timeout: 4000,
+        timeout: 6000,
         onClick: function () {
             window.focus();
             this.close();

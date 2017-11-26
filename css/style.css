@@ -68,6 +68,10 @@ li {
     font-size: 16px;
     font-weight: bold;
     background-color: #eeeeee;
+    transition: 0.5s;
+}
+li:hover {
+    background-color: #d1cfcf;
 }
 .bottom h2 {
     background-color: #03313e;
